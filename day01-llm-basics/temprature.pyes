@@ -1,0 +1,8 @@
+import ollama
+
+prompt = "Give me a one-line name for a cybersecurity blog."
+for temp in (0, 1.5):
+    print("temperature", temp)
+    for _ in range(3):
+        r = ollama.generate(model="llama3.2:3b", prompt=prompt, options={"temperature": temp})
+        print("   ", r["response"].strip())
