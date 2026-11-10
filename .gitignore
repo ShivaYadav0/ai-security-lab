@@ -4,3 +4,8 @@ __pycache__/
 *.gguf
 *.safetensors
 chroma_db/
+*.joblib
+mlflow.db
+mlartifacts/
+mlruns/
+outbox.txt
